@@ -477,10 +477,6 @@ h1, h2, h3, h4 { font-family: var(--head); font-weight: 600; line-height: 1.08; 
 @media (max-width: 860px) { .site-footer .top { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .site-footer .top { grid-template-columns: 1fr; } }
 
-/* Variantes de texto del hero del home: la corta y la foto-banda solo aparecen en movil */
-.hero .lead-sm { display: none; }
-.hero-photo-m { display: none; }
-
 /* ---------- Small-screen layout polish (al final: gana sobre las reglas base) ---------- */
 @media (max-width: 600px) {
   .wrap { padding: 0 18px; }
@@ -488,37 +484,40 @@ h1, h2, h3, h4 { font-family: var(--head); font-weight: 600; line-height: 1.08; 
   .cta { padding: 60px 0; }
   .section-head { margin-bottom: 30px; }
 
-  /* Home: hero de bloque solido (sin foto). La foto pasa a una banda debajo. */
+  /* Hero del home en movil: foto arriba (que respire) + panel oscuro con el
+     texto abajo, en vez de todo el contenido encima de una foto cargada. */
   .hero:not(.hero-sm) {
-    display: flex;
+    display: block;
     min-height: 0;
-    padding: 128px 0 40px;
-    background: linear-gradient(165deg, #4a3d31 0%, #2b231c 100%) !important;
+    padding: 40vh 0 0;
+    background-position: center 30%;
+    background-size: cover;
+  }
+  .hero:not(.hero-sm) .wrap {
+    background: var(--charcoal);
+    border-radius: 22px 22px 0 0;
+    padding: 30px 20px 6px;
+    box-shadow: 0 -20px 40px rgba(31, 24, 18, 0.45);
   }
   .hero:not(.hero-sm) .eyebrow {
     display: block;
     color: var(--amber);
     font-size: 11px;
     letter-spacing: 0.22em;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
-  .hero h1 { font-size: clamp(1.85rem, 8.5vw, 2.3rem); line-height: 1.14; max-width: 100%; }
+  .hero h1 { font-size: clamp(1.7rem, 8vw, 2.15rem); line-height: 1.14; max-width: 100%; margin: 0; }
   .hero h1 .outline { -webkit-text-stroke-width: 1px; }
-  .hero .lead-lg { display: none; }
-  .hero .lead-sm {
-    display: block;
-    font-size: 0.98rem;
+  .hero p.lead {
+    font-size: 0.9rem;
     line-height: 1.55;
-    margin-top: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.78);
   }
-  .hero .pills { gap: 10px; margin-top: 24px; flex-direction: column; }
+  .hero .pills { gap: 10px; margin-top: 20px; flex-direction: column; }
   .hero .pills .btn { width: 100%; justify-content: center; padding: 13px 20px; font-size: 14px; }
   /* "Our Services" ya vive en el menu — fuera del hero en movil */
   .hero .pills a[href="services.html"] { display: none; }
-
-  /* Foto del hero como banda propia, justo debajo */
-  .hero-photo-m { display: block; width: 100%; height: 260px; object-fit: cover; }
 
   /* subpaginas: hero compacto, mantiene su eyebrow de contexto */
   .hero.hero-sm { min-height: clamp(260px, 36vh, 340px); padding-top: 108px; padding-bottom: 30px; }
