@@ -19,6 +19,38 @@
   window.addEventListener('resize', onScroll);
 })();
 
+// Mobile navigation drawer: hamburger toggles a slide-in panel with a backdrop.
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('site-nav');
+  if (!toggle || !nav) return;
+
+  var backdrop = document.createElement('div');
+  backdrop.className = 'nav-backdrop';
+  document.body.appendChild(backdrop);
+
+  function setOpen(open) {
+    nav.classList.toggle('open', open);
+    backdrop.classList.toggle('show', open);
+    document.body.classList.toggle('nav-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', function () {
+    setOpen(!nav.classList.contains('open'));
+  });
+  backdrop.addEventListener('click', function () { setOpen(false); });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setOpen(false);
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 820) setOpen(false);
+  });
+})();
+
 // Coverflow: an auto-scrolling 3D image carousel that curves toward the viewer.
 (function () {
   var viewport = document.querySelector('.coverflow');
