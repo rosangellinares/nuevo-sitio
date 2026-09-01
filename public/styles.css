@@ -484,23 +484,45 @@ h1, h2, h3, h4 { font-family: var(--head); font-weight: 600; line-height: 1.08; 
   .cta { padding: 60px 0; }
   .section-head { margin-bottom: 30px; }
 
-  .hero { padding: 116px 0 44px; min-height: clamp(440px, 74vh, 540px); }
-  .hero.hero-sm { min-height: clamp(280px, 38vh, 360px); padding-top: 110px; }
-  /* en el home el logo ya establece la marca — el eyebrow lo repite en movil.
-     En las subpaginas (hero-sm) el eyebrow es contexto ("Contact", "About") y se mantiene. */
-  .hero:not(.hero-sm) .eyebrow { display: none; }
-  .hero h1 { font-size: clamp(1.7rem, 8vw, 2.15rem); line-height: 1.12; max-width: 100%; }
+  /* Hero del home en movil: foto arriba (que respire) + panel oscuro con el
+     texto abajo, en vez de todo el contenido encima de una foto cargada. */
+  .hero:not(.hero-sm) {
+    display: block;
+    min-height: 0;
+    padding: 40vh 0 0;
+    background-position: center 30%;
+    background-size: cover;
+  }
+  .hero:not(.hero-sm) .wrap {
+    background: var(--charcoal);
+    border-radius: 22px 22px 0 0;
+    padding: 30px 20px 6px;
+    box-shadow: 0 -20px 40px rgba(31, 24, 18, 0.45);
+  }
+  .hero:not(.hero-sm) .eyebrow {
+    display: block;
+    color: var(--amber);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    margin-bottom: 10px;
+  }
+  .hero h1 { font-size: clamp(1.7rem, 8vw, 2.15rem); line-height: 1.14; max-width: 100%; margin: 0; }
   .hero h1 .outline { -webkit-text-stroke-width: 1px; }
   .hero p.lead {
     font-size: 0.9rem;
     line-height: 1.55;
-    margin-top: 14px;
-    color: rgba(255, 255, 255, 0.8);
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.78);
   }
-  .hero .pills { gap: 10px; margin-top: 22px; }
+  .hero .pills { gap: 10px; margin-top: 20px; flex-direction: column; }
   .hero .pills .btn { width: 100%; justify-content: center; padding: 13px 20px; font-size: 14px; }
   /* "Our Services" ya vive en el menu — fuera del hero en movil */
   .hero .pills a[href="services.html"] { display: none; }
+
+  /* subpaginas: hero compacto, mantiene su eyebrow de contexto */
+  .hero.hero-sm { min-height: clamp(260px, 36vh, 340px); padding-top: 108px; padding-bottom: 30px; }
+  .hero.hero-sm h1 { font-size: clamp(1.7rem, 7.5vw, 2.1rem); }
+  .hero.hero-sm p.lead { font-size: 0.9rem; }
 
   .cta .pills .btn { width: 100%; justify-content: center; }
   .section-head .link { font-size: 13px; }
