@@ -364,13 +364,20 @@ h1, h2, h3, h4 { font-family: var(--head); font-weight: 600; line-height: 1.08; 
 @media (max-width: 720px) { .areas { grid-template-columns: 1fr; } }
 
 /* ---------- Call band ---------- */
-.callband { display: grid; grid-template-columns: 1fr; gap: 22px; text-align: center; }
+.callband { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; text-align: center; }
 .callband .cell { padding: 8px; }
 .callband .k { font-family: var(--head); text-transform: uppercase; letter-spacing: 0.16em; font-size: 12px; font-weight: 600; color: #3f342a; }
 .section.dark .callband .k { color: var(--amber); }
 .callband .v { font-family: var(--head); font-size: 1.7rem; margin-top: 6px; color: var(--ink); }
 .section.dark .callband .v { color: #fff; }
 .callband .v a { color: inherit; text-decoration: none; }
+/* siempre en fila: en pantallas chicas se achica el texto para que entren las 3 */
+@media (max-width: 720px) {
+  .callband { gap: 10px; }
+  .callband .cell { padding: 4px 2px; }
+  .callband .k { font-size: 10px; letter-spacing: 0.08em; }
+  .callband .v { font-size: clamp(0.85rem, 3.4vw, 1.2rem); }
+}
 
 /* ---------- Coverage chips ---------- */
 .chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
