@@ -1,59 +1,216 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nuevo Sitio</title>
-  <meta name="description" content="Sitio corporativo." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Concretum Operis Ready Mix | Ready Mix Concrete Delivery — Richmond &amp; the East Bay</title>
+  <meta name="description" content="Central-batched ready mix concrete delivered on schedule across the greater Bay Area. Residential, commercial and structural pours. Free quotes within one business day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=26" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a href="index.html" class="brand">Nuevo Sitio</a>
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img class="l-dark" src="assets/logo-concretum.png" alt="Concretum Operis Ready Mix — Lic #1062721" />
+        <img class="l-light" src="assets/logo-concretum-light.png" alt="Concretum Operis Ready Mix — Lic #1062721" />
+      </a>
       <nav class="nav">
-        <a href="index.html" aria-current="page">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn-quote">Free Quote &rarr;</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Tu propuesta de valor en una frase</h1>
-        <p>Describe brevemente qué hace tu empresa y por qué un cliente debería confiar en ti.</p>
-        <a href="contacto.html" class="btn">Contáctanos</a>
+    <section class="hero" style="background-image: linear-gradient(180deg, rgba(45,37,30,0.55) 0%, rgba(45,37,30,0.35) 40%, rgba(45,37,30,0.92) 100%), url('assets/hero-sunset.png');">
+      <div class="wrap">
+        <p class="eyebrow">Concretum Operis Ready Mix</p>
+        <h1>Ready Mix Concrete <span class="outline">You Can Trust</span></h1>
+        <p class="lead">Central-batched concrete, mixed to spec and quality-checked before it leaves
+          the yard. Delivery windows built around your pour schedule &mdash; not a shared dispatch queue.
+          Serving Richmond and the greater Bay Area.</p>
+        <div class="pills">
+          <a href="contact.html" class="btn btn-amber">Start a Project</a>
+          <a href="services.html" class="btn btn-outline">Our Services</a>
+          <a href="tel:+14157296060" class="btn btn-outline">Call (415) 729-6060</a>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <h2>Lo que ofrecemos</h2>
-        <div class="grid">
-          <article class="card">
-            <h3>Servicio uno</h3>
-            <p>Breve descripción del servicio y del beneficio para el cliente.</p>
-          </article>
-          <article class="card">
-            <h3>Servicio dos</h3>
-            <p>Breve descripción del servicio y del beneficio para el cliente.</p>
-          </article>
-          <article class="card">
-            <h3>Servicio tres</h3>
-            <p>Breve descripción del servicio y del beneficio para el cliente.</p>
-          </article>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Our Services</p>
+            <h2>Ready mix delivery, built around your schedule</h2>
+          </div>
+          <a href="services.html" class="link">View all &rarr;</a>
+        </div>
+        <div class="svc-grid">
+          <a href="service-ready-mix.html" class="svc-card">
+            <img src="assets/truck-side.png" alt="Concretum Operis volumetric mixer truck" />
+            <div class="txt"><h3>Ready Mix Concrete Delivery</h3><span class="go">Explore &rarr;</span></div>
+          </a>
+          <a href="service-commercial.html" class="svc-card">
+            <img src="assets/workers-pour.png" alt="Concretum Operis crew pouring concrete on a commercial site" />
+            <div class="txt"><h3>Commercial Concrete Delivery</h3><span class="go">Explore &rarr;</span></div>
+          </a>
+          <a href="service-residential.html" class="svc-card">
+            <img src="assets/slab-pour.png" alt="Concrete poured into a rebar-tied residential slab form" />
+            <div class="txt"><h3>Residential Concrete Delivery</h3><span class="go">Explore &rarr;</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="wrap">
+        <div class="feature">
+          <div class="media"><img src="assets/slab-pour.png" alt="Concrete placement on a reinforced slab" /></div>
+          <div>
+            <p class="eyebrow">Precision-Engineered</p>
+            <h2>Concrete solutions designed to last</h2>
+            <p>We specialize in concrete delivery for foundations, driveways, patios, sidewalks,
+              slabs and structural work &mdash; batched for the strength, workability and durability
+              your project calls for.</p>
+            <p>Mix designs are checked against the same ACI standards our own crews expect, drivers
+              are briefed on access and pour sequencing before they leave the yard, and every load is
+              tracked from batch to placement.</p>
+            <a href="about.html" class="btn btn-outline-dark">More About Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="wrap">
+        <div class="callband">
+          <div class="cell"><div class="k">Call Dispatch</div><div class="v"><a href="tel:+14157296060">(415) 729-6060</a></div></div>
+          <div class="cell"><div class="k">Quotes</div><div class="v">Within 1 business day</div></div>
+          <div class="cell"><div class="k">Coverage</div><div class="v">North Bay &rarr; Santa Cruz</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2>On the road and on the pour</h2>
+          </div>
+        </div>
+      </div>
+      <div class="coverflow">
+        <div class="cf-track">
+          <div class="cf-item"><img src="assets/workers-pour.png" alt="Crew placing concrete beside a Concretum Operis mixer" /></div>
+          <div class="cf-item"><img src="assets/truck-aerial.png" alt="Aerial view of a Concretum Operis mixer truck on a rural road" /></div>
+          <div class="cf-item"><img src="assets/truck-yard.png" alt="Concretum Operis mixer truck parked at the yard" /></div>
+          <div class="cf-item"><img src="assets/road-pour.png" alt="Aerial view of a roadway concrete pour" /></div>
+          <div class="cf-item"><img src="assets/truck-highway.png" alt="Concretum Operis mixer truck on the highway" /></div>
+          <div class="cf-item"><img src="assets/truck-night.png" alt="Concretum Operis mixer truck on a city street at night" /></div>
+          <div class="cf-item"><img src="assets/mixer-chute.jpg" alt="Close-up of a mixer drum discharging concrete" /></div>
+          <div class="cf-item"><img src="assets/truck-depot.png" alt="Mixer truck under the depot canopy" /></div>
+          <div class="cf-item"><img src="assets/truck-side.png" alt="Side view of a Concretum Operis volumetric mixer" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">Areas We Serve</p><h2>The greater Bay Area</h2></div></div>
+        <p class="intro">Primary service area is the East Bay from Richmond. Same-day scheduling is
+          available for standard mixes across the region.</p>
+        <div class="chips">
+          <span>North Bay / Marin</span>
+          <span>Napa / Sonoma</span>
+          <span>East Bay</span>
+          <span>San Francisco</span>
+          <span>Peninsula</span>
+          <span>South Bay</span>
+          <span>Santa Cruz / Monterey</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">Testimonials</p><h2>What contractors and homeowners say</h2></div></div>
+        <div class="quotes">
+          <figure class="quote">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"Trucks showed up right in our window with zero slump issues. Made it easy to keep three crews moving on the same schedule."</blockquote>
+            <cite>General Contractor &mdash; Commercial project, Oakland, CA</cite>
+          </figure>
+          <figure class="quote">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"Ordered a small load for a driveway repour and didn't get treated like a small job. Dispatch called ahead, truck was on time."</blockquote>
+            <cite>Homeowner &mdash; Residential driveway, Richmond, CA</cite>
+          </figure>
+          <figure class="quote">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>"Multiple trucks stayed sequenced through the whole pour. No cold joints, no waiting around."</blockquote>
+            <cite>Site Superintendent &mdash; Multi-unit foundation, Berkeley, CA</cite>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <h2>Ready to pour your next project?</h2>
+        <p>Tell us your pour date, volume and location — we'll confirm a delivery window and mix spec within one business day.</p>
+        <div class="pills" style="justify-content:center">
+          <a href="contact.html" class="btn btn-dark">Get a Free Quote</a>
+          <a href="tel:+14157296060" class="btn btn-dark">Call (415) 729-6060</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Nuevo Sitio. Todos los derechos reservados.</p>
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <a href="index.html" class="brand">
+            <img class="l-dark" src="assets/logo-concretum.png" alt="Concretum Operis Ready Mix" />
+            <img class="l-light" src="assets/logo-concretum-light.png" alt="Concretum Operis Ready Mix" />
+          </a>
+          <p>The ready-mix concrete delivery division of Concretum Operis, a Richmond, CA contractor with 20+ years placing concrete across the East Bay.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="service-ready-mix.html">Ready Mix Delivery</a>
+          <a href="service-commercial.html">Commercial Delivery</a>
+          <a href="service-residential.html">Residential Delivery</a>
+          <a href="services.html">Service Areas</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:+14157296060">(415) 729-6060</a>
+          <a href="mailto:concretum721@yahoo.com">concretum721@yahoo.com</a>
+          <a href="contact.html">Richmond, CA &mdash; East Bay</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© 2026 Concretum Operis Ready Mix. A division of Concretum Operis.</span>
+        <span>License #1062721 &nbsp;·&nbsp; Privacy Policy</span>
+      </div>
     </div>
   </footer>
+  <script src="app.js?v=26" defer></script>
 </body>
 </html>

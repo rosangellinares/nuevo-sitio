@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Concretum Operis Ready Mix</title>
+  <meta name="description" content="Get a free ready mix quote. Tell us what you're pouring and where — we'll confirm mix, volume and a delivery window within one business day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=26" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <img class="l-dark" src="assets/logo-concretum.png" alt="Concretum Operis Ready Mix — Lic #1062721" />
+        <img class="l-light" src="assets/logo-concretum-light.png" alt="Concretum Operis Ready Mix — Lic #1062721" />
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="contact.html" class="btn-quote">Free Quote &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-sm" style="background-image: linear-gradient(180deg, rgba(45,37,30,0.5) 0%, rgba(45,37,30,0.45) 40%, rgba(45,37,30,0.9) 100%), url('assets/truck-night.png');">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h1>Get A Free <span class="outline">Ready Mix Quote</span></h1>
+        <p class="lead">Tell us what you're pouring and where. We'll confirm mix, volume and a delivery window within one business day.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="contact-grid">
+          <form action="#" method="post">
+            <div class="stepnum"><b>1</b> Select services</div>
+            <div class="checks">
+              <label><input type="checkbox" name="service" value="ready-mix" />
+                <span><strong>Ready Mix Concrete Delivery</strong> — Central-batched concrete delivered on schedule, mixed to spec and ready to place.</span></label>
+              <label><input type="checkbox" name="service" value="commercial" />
+                <span><strong>Commercial Concrete Delivery</strong> — Coordinated, large-volume pours for slabs, footings and structural work.</span></label>
+              <label><input type="checkbox" name="service" value="residential" />
+                <span><strong>Residential Concrete Delivery</strong> — Right-sized loads for driveways, patios, footings and slabs at homes.</span></label>
+            </div>
+
+            <div class="stepnum"><b>2</b> Your info</div>
+            <div class="field"><label for="name">Full name</label><input type="text" id="name" name="name" required /></div>
+            <div class="field"><label for="contact">Phone or email</label><input type="text" id="contact" name="contact" required /></div>
+            <div class="field"><label for="message">Project details <span style="text-transform:none;font-weight:400;opacity:0.7">(optional)</span></label><textarea id="message" name="message" rows="4"></textarea></div>
+            <button type="submit" class="btn btn-amber">Request Quote</button>
+            <p style="margin-top:14px;color:var(--muted);font-size:0.9rem">This form is not yet connected. Wire it to Formspree, Netlify Forms, or your own endpoint before launch. On success, show: "Request Received — Thanks, we'll follow up within one business day to confirm your mix and delivery window. For anything urgent, call (415) 729-6060."</p>
+          </form>
+
+          <aside>
+            <dl class="infocard">
+              <dt>Call Dispatch</dt>
+              <dd><a href="tel:+14157296060">(415) 729-6060</a></dd>
+              <dt>Email</dt>
+              <dd><a href="mailto:concretum721@yahoo.com">concretum721@yahoo.com</a></dd>
+              <dt>Hours — Mon&ndash;Sat</dt>
+              <dd>5:30 AM – 10:00 PM</dd>
+              <dt>Hours — Sun</dt>
+              <dd>9:00 AM – 6:00 PM</dd>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <a href="index.html" class="brand">
+            <img class="l-dark" src="assets/logo-concretum.png" alt="Concretum Operis Ready Mix" />
+            <img class="l-light" src="assets/logo-concretum-light.png" alt="Concretum Operis Ready Mix" />
+          </a>
+          <p>The ready-mix concrete delivery division of Concretum Operis, a Richmond, CA contractor with 20+ years placing concrete across the East Bay.</p>
+        </div>
+        <div>
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="service-ready-mix.html">Ready Mix Delivery</a>
+          <a href="service-commercial.html">Commercial Delivery</a>
+          <a href="service-residential.html">Residential Delivery</a>
+          <a href="services.html">Service Areas</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:+14157296060">(415) 729-6060</a>
+          <a href="mailto:concretum721@yahoo.com">concretum721@yahoo.com</a>
+          <a href="contact.html">Richmond, CA &mdash; East Bay</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© 2026 Concretum Operis Ready Mix. A division of Concretum Operis.</span>
+        <span>License #1062721 &nbsp;·&nbsp; Privacy Policy</span>
+      </div>
+    </div>
+  </footer>
+  <script src="app.js?v=26" defer></script>
+</body>
+</html>
