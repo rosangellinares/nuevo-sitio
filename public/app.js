@@ -1,3 +1,21 @@
+// "Back" links (a[data-back]): return to the page the visitor came from when it
+// belongs to this site; otherwise fall through to the href (e.g. the home page).
+(function () {
+  var links = document.querySelectorAll('a[data-back]');
+  if (!links.length) return;
+  links.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var ref = document.referrer;
+      var sameSite = false;
+      try { sameSite = ref && new URL(ref).origin === location.origin && ref !== location.href; } catch (err) {}
+      if (sameSite && window.history.length > 1) {
+        e.preventDefault();
+        window.history.back();
+      }
+    });
+  });
+})();
+
 // Fixed header: stays transparent while the hero is on screen, then fades to a
 // solid bar once the hero has scrolled past (so white nav text stays readable).
 (function () {
